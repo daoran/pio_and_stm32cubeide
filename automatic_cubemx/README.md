@@ -8,6 +8,8 @@ This script reads the .project and .cproject file created by STM32CubeIDE and th
 
 The script does quite a few things to ensure that platformio behaves. It tries to gather as much information as possible without manual configuration and using this information forces platformio into following a working compilation path. A very few things have to be added to the platformio.ini to allow for that. This is done only once and then the script does its work.
 
+An important assumption that the script makes is, that the STM32CubeIDE-project directory and the PlatformIO-project directory are the same. This means that the platformio.ini file and the .project file are in the same directory.
+
 # Steps to use the Script
 
 1. In STM32CubeIDE create a new project with the target and needed middleware. Configure your uC to your liking and click on \<Next\> (do not click on \<Finish\>). Use 
